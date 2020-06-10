@@ -12,6 +12,16 @@ import java.util.List;
 @PageEntry(title = "Main page")
 public class WileyComPages extends Page {
 
+    @ElementTitle(value = "SearchField")
+    @FindBy(xpath = "//input[@title='Поиск']")
+    private WebElement searchField;
+
+    @ElementTitle(value = "SearchButton")
+    @FindBy(xpath = "//input[@value='Поиск в Google']")
+    private WebElement searchButton;
+
+
+
     @ElementTitle(value = "Wiley")
     @FindBy(xpath = "//*[@id='main-header-container']/div/div[1]/div/div/div/a")
     private WebElement Wiley;

@@ -30,6 +30,21 @@ public class WileyCom {
     public void openURL(String URL) throws NoSuchMethodException, PageException, InterruptedException {
         getStepDefs().goToUrl(URL);
         getStepDefs().openPage("Main page");
+        getStepDefs().userActionTwoParams("заполняет поле", "SearchField", "Открытие");
+        getStepDefs().userActionOneParam("нажимает кнопку", "SearchButton");
+
+    }
+ /**
+     * Open https://www.wiley.com/en-us
+     * Check the following links are displayed in the top menu
+     * - Who We Serve
+     * - Subjects
+     * - About
+     */
+    @Тогда("^open2 \"([^\"]*)\"$")
+    public void openURLw(String URL) throws NoSuchMethodException, PageException, InterruptedException {
+        getStepDefs().goToUrl(URL);
+        getStepDefs().openPage("Main page");
         getStepDefs().userActionOneParam("нажимает кнопку", "Button:No");
         getAssertSteps().elementIsDisplayed("WHO WE SERVE");
         getAssertSteps().elementIsDisplayed("SUBJECTS");

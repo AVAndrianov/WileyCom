@@ -32,7 +32,7 @@
             <artifactId>gherkin-jvm-deps</artifactId>
             <version>1.0.4</version>
         </dependency>
-
+//artifactId[text='selenide']
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
